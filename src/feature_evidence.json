@@ -1,0 +1,113 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-responsive-marketing-website-for-jo-enterprises-with-a-top-navigation-and-the-following-sections-pages-home-hero-value-proposition-about-services-and-contact",
+      "featureTitle": "Create a responsive marketing website for “Jo enterprises” with a top navigation and the following sections/pages: Home (hero + value proposition), About, Services, and Contact.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/App.tsx",
+        "frontend/src/components/marketing/HeaderNav.tsx",
+        "frontend/src/components/marketing/Sections.tsx",
+        "frontend/src/main.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-define-and-apply-a-coherent-visual-theme-colors-typography-spacing-and-component-style-appropriate-for-a-professional-business-website-and-use-it-consistently-across-all-pages-sections",
+      "featureTitle": "Define and apply a coherent visual theme (colors, typography, spacing, and component style) appropriate for a professional business website, and use it consistently across all pages/sections.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/marketing/MarketingPrimitives.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-contact-form-that-collects-at-minimum-name-email-and-message-performs-basic-client-side-validation-and-submits-the-inquiry-to-the-backend-for-storage",
+      "featureTitle": "Add a Contact form that collects at minimum: name, email, and message, performs basic client-side validation, and submits the inquiry to the backend for storage.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/marketing/ContactSection.tsx",
+        "frontend/src/hooks/useSubmitContactInquiry.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-basic-footer-content-for-jo-enterprises-business-name-and-a-short-tagline-and-include-standard-website-essentials-readable-headings-accessible-color-contrast-and-keyboard-navigable-links-and-form-fields",
+      "featureTitle": "Add basic footer content for Jo enterprises (business name and a short tagline) and include standard website essentials: readable headings, accessible color contrast, and keyboard-navigable links and form fields.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/marketing/ContactSection.tsx",
+        "frontend/src/components/marketing/Footer.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-required-static-image-assets-logo-and-a-hero-banner-visual-under-frontend-public-assets-generated-and-render-them-in-the-site-header-hero-areas",
+      "featureTitle": "Add required static image assets (logo and a hero/banner visual) under frontend/public/assets/generated and render them in the site header/hero areas.",
+      "files": [
+        "frontend/src/components/marketing/HeaderNav.tsx",
+        "frontend/src/components/marketing/Sections.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

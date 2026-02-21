@@ -1,0 +1,161 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Jo Enterprises marketing website (frontend)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a responsive marketing site with top navigation and Home/About/Services/Contact sections.",
+      "acceptanceCriteria": [
+        "Site displays the business name “Jo enterprises” prominently in the header/hero.",
+        "Navigation links allow moving to Home, About, Services, and Contact (via pages or anchored sections).",
+        "Layout is mobile-first and remains usable on common breakpoints (mobile/tablet/desktop)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the main marketing page layout using anchored sections (Home hero + value proposition, About, Services, Contact) and a responsive top navigation that links to each section."
+        },
+        {
+          "path": "frontend/src/components/marketing/HeaderNav.tsx",
+          "operation": "create",
+          "description": "Create a responsive header with logo, business name, and keyboard-navigable anchor links to Home/About/Services/Contact (mobile-first layout with a compact menu for small screens)."
+        },
+        {
+          "path": "frontend/src/components/marketing/Sections.tsx",
+          "operation": "create",
+          "description": "Create presentational section components for Home (hero + value proposition), About, and Services with semantic headings and responsive spacing."
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "operation": "modify",
+          "description": "Ensure the app renders the new App component and that global styles are imported (App is expected at frontend/src/App.tsx)."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Verify document title and language metadata remain correct for an English marketing site and align any visible name/title text with “Jo enterprises”."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Define and apply a professional, consistent theme (non-blue/purple primary palette) across the site.",
+      "acceptanceCriteria": [
+        "A consistent set of typography styles (headings/body), spacing rules, and button/link styles is used across the site.",
+        "The theme avoids a default/template look by using a distinct color palette and clear hierarchy (without using blue/purple as the primary palette)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create global styles including Tailwind base layers, site-wide typography defaults, focus-visible styles, and CSS variables for a distinct non-blue/purple primary palette used consistently across components."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Adjust Tailwind theme extensions (e.g., radii, typography defaults, and color tokens via CSS variables) to support a cohesive business theme with a non-blue/purple primary palette."
+        },
+        {
+          "path": "frontend/src/components/marketing/MarketingPrimitives.tsx",
+          "operation": "create",
+          "description": "Add reusable marketing primitives (e.g., Container, SectionHeading, PrimaryButton, TextLink) to enforce consistent spacing, typography, and component styling across the site."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Apply the theme primitives and consistent layout/typography across all sections to avoid a default/template look."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add a validated Contact form that submits inquiries to the backend and shows success/error states.",
+      "acceptanceCriteria": [
+        "Form validates required fields and shows clear English error messages.",
+        "On successful submit, the user sees a success confirmation state and the form resets.",
+        "Failed submissions show an error state without losing the user’s typed message."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/marketing/ContactSection.tsx",
+          "operation": "create",
+          "description": "Create the Contact section containing a form (name, email, message) with client-side validation, accessible labels, clear English error messages, and success/error submission states."
+        },
+        {
+          "path": "frontend/src/hooks/useSubmitContactInquiry.ts",
+          "operation": "create",
+          "description": "Create a React Query mutation hook that uses useActor to call the backend capability submitContactForm(name, email, message) and returns mutation state for success/error UI."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the ContactSection into the Contact anchor section and ensure submission success resets the form while failures preserve the typed message."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add a site-wide footer and baseline accessibility essentials (contrast, headings, focus, keyboard navigation, labeled fields).",
+      "acceptanceCriteria": [
+        "Footer is present across the site and includes “Jo enterprises”.",
+        "All interactive elements are reachable via keyboard and have visible focus styles.",
+        "Text contrast is sufficient for readability and form fields have associated labels."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/marketing/Footer.tsx",
+          "operation": "create",
+          "description": "Create a footer component with “Jo enterprises” and a short English tagline, styled consistently with the site theme."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add/verify visible focus styles (e.g., :focus-visible) and ensure default text/background contrast supports readability across the theme."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Render the Footer across the site and verify headings structure (H1 in hero, logical H2/H3 in sections) and keyboard-navigable links/forms."
+        },
+        {
+          "path": "frontend/src/components/marketing/ContactSection.tsx",
+          "operation": "modify",
+          "description": "Ensure each form field has an associated label, appropriate input attributes, and keyboard-accessible error messaging."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Add required generated logo and hero banner assets and render them in header and hero without layout shifting.",
+      "acceptanceCriteria": [
+        "Generated images exist in frontend/public/assets/generated with the specified filenames.",
+        "The logo is displayed in the site header/navigation area.",
+        "A hero/banner image is displayed in the Home hero section without layout shifting."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/jo-enterprises-logo.dim_512x256.png",
+          "operation": "create",
+          "description": "Add the generated logo asset at the exact required path/filename so it can be rendered by the header."
+        },
+        {
+          "path": "frontend/public/assets/generated/jo-enterprises-hero.dim_1600x900.png",
+          "operation": "create",
+          "description": "Add the generated hero/banner asset at the exact required path/filename so it can be rendered in the Home hero section."
+        },
+        {
+          "path": "frontend/src/components/marketing/HeaderNav.tsx",
+          "operation": "modify",
+          "description": "Render the logo image from frontend/public/assets/generated/jo-enterprises-logo.dim_512x256.png in the header/navigation area with explicit sizing to prevent layout shift."
+        },
+        {
+          "path": "frontend/src/components/marketing/Sections.tsx",
+          "operation": "modify",
+          "description": "Render the hero/banner image from frontend/public/assets/generated/jo-enterprises-hero.dim_1600x900.png in the Home hero section with reserved space (explicit dimensions/aspect handling) to prevent layout shift."
+        }
+      ]
+    }
+  ]
+}

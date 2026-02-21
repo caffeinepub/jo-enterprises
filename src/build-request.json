@@ -1,0 +1,146 @@
+{
+  "kind": "build_request",
+  "title": "Business website for Jo enterprises",
+  "projectName": "Jo Enterprises",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a responsive marketing website for “Jo enterprises” with a top navigation and the following sections/pages: Home (hero + value proposition), About, Services, and Contact.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "I need you to help me create a website for business, name is Jo enterprises"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Site displays the business name “Jo enterprises” prominently in the header/hero.",
+        "Navigation links allow moving to Home, About, Services, and Contact (via pages or anchored sections).",
+        "Layout is mobile-first and remains usable on common breakpoints (mobile/tablet/desktop)."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Define and apply a coherent visual theme (colors, typography, spacing, and component style) appropriate for a professional business website, and use it consistently across all pages/sections.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "I need you to help me create a website for business, name is Jo enterprises"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A consistent set of typography styles (headings/body), spacing rules, and button/link styles is used across the site.",
+        "The theme avoids a default/template look by using a distinct color palette and clear hierarchy (without using blue/purple as the primary palette)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add a Contact form that collects at minimum: name, email, and message, performs basic client-side validation, and submits the inquiry to the backend for storage.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "I need you to help me create a website for business, name is Jo enterprises"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Form validates required fields and shows clear English error messages.",
+        "On successful submit, the user sees a success confirmation state and the form resets.",
+        "Failed submissions show an error state without losing the user’s typed message."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement backend data storage for contact inquiries, including a stable data model, an endpoint to create an inquiry, and an endpoint to list inquiries (for future admin use).",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "I need you to help me create a website for business, name is Jo enterprises"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend exposes a method to create/store an inquiry with timestamp and submitted fields.",
+        "Backend exposes a method to list stored inquiries.",
+        "Stored inquiries persist across canister upgrades using stable storage patterns (and a migration file only if needed by the template)."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add basic footer content for Jo enterprises (business name and a short tagline) and include standard website essentials: readable headings, accessible color contrast, and keyboard-navigable links and form fields.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "I need you to help me create a website for business, name is Jo enterprises"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer is present across the site and includes “Jo enterprises”.",
+        "All interactive elements are reachable via keyboard and have visible focus styles.",
+        "Text contrast is sufficient for readability and form fields have associated labels."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Add required static image assets (logo and a hero/banner visual) under frontend/public/assets/generated and render them in the site header/hero areas.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "I need you to help me create a website for business, name is Jo enterprises"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images exist in frontend/public/assets/generated with the specified filenames.",
+        "The logo is displayed in the site header/navigation area.",
+        "A hero/banner image is displayed in the Home hero section without layout shifting."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for all user-facing text.",
+    "Do not modify any files under frontend/src/components/ui or other immutable paths defined by the system context.",
+    "Backend must remain a single Motoko actor (single-actor architecture).",
+    "Do not add third-party authentication providers; only Internet Identity is allowed (not required for this marketing site).",
+    "Do not integrate external email/SMS/push services for the contact form submission."
+  ],
+  "nonGoals": [
+    "E-commerce, payments, subscriptions, or checkout.",
+    "Multi-language/i18n support.",
+    "Blog/CMS features (post editing, categories, rich content).",
+    "Real-time chat or WebSocket-based features.",
+    "Third-party analytics or marketing integrations."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Minimal professional wordmark logo, dark text on transparent background (jo-enterprises-logo.dim_512x256.png)",
+      "Abstract business hero banner illustration with neutral modern palette (jo-enterprises-hero.dim_1600x900.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

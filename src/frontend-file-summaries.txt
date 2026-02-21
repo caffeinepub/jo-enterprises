@@ -1,0 +1,13 @@
+{
+  "frontend/src/App.tsx": "Main application component that renders the complete marketing website layout with header navigation, hero, about, services, contact sections, and footer.",
+  "frontend/src/components/marketing/HeaderNav.tsx": "Responsive header navigation component with logo, smooth-scrolling anchor links, mobile menu toggle, and scroll-based styling effects.",
+  "frontend/src/components/marketing/Sections.tsx": "Contains HeroSection with banner image and value propositions, AboutSection with company information, and ServicesSection displaying three service offerings.",
+  "frontend/src/components/marketing/ContactSection.tsx": "Contact form with validation, submission handling via React Query, contact information display, and success/error states.",
+  "frontend/src/components/marketing/MarketingPrimitives.tsx": "Reusable marketing components including Container for consistent layout, SectionHeading for typography, and PrimaryButton for consistent CTA styling.",
+  "frontend/src/components/marketing/Footer.tsx": "Site footer with brand information, quick navigation links, contact details, and Caffeine.ai attribution with UTM tracking.",
+  "frontend/src/hooks/useSubmitContactInquiry.ts": "React Query mutation hook that handles contact form submission to the backend and manages loading/error states.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching data from the backend, currently includes useGetAllInquiries for future admin functionality.",
+  "frontend/src/index.css": "Global styles with warm earth-tone OKLCH color system (terracotta primary, sand secondary) for both light and dark modes, plus typography and focus styles.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended theme including Inter font family, OKLCH color tokens, custom shadows, and animation utilities.",
+  "frontend/src/lib/utils.ts": "Utility function for merging Tailwind CSS classes using clsx and tailwind-merge."
+}

@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.625rem;
+        /* Warm earth tones - Light mode */
+        --background: 0.99 0.005 60;
+        --foreground: 0.25 0.015 40;
+        --card: 1 0 0;
+        --card-foreground: 0.25 0.015 40;
+        --popover: 1 0 0;
+        --popover-foreground: 0.25 0.015 40;
+        /* Rich terracotta primary */
+        --primary: 0.55 0.18 35;
+        --primary-foreground: 0.99 0.005 60;
+        /* Warm sand secondary */
+        --secondary: 0.92 0.025 70;
+        --secondary-foreground: 0.25 0.015 40;
+        --muted: 0.95 0.01 60;
+        --muted-foreground: 0.50 0.01 40;
+        --accent: 0.88 0.04 55;
+        --accent-foreground: 0.25 0.015 40;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.88 0.015 50;
+        --input: 0.88 0.015 50;
+        --ring: 0.55 0.18 35;
+        --chart-1: 0.646 0.222 41.116;
+        --chart-2: 0.6 0.118 184.704;
+        --chart-3: 0.398 0.07 227.392;
+        --chart-4: 0.828 0.189 84.429;
+        --chart-5: 0.769 0.188 70.08;
+    }
+
+    .dark {
+        /* Dark warm tones */
+        --background: 0.18 0.02 35;
+        --foreground: 0.95 0.01 60;
+        --card: 0.22 0.025 38;
+        --card-foreground: 0.95 0.01 60;
+        --popover: 0.22 0.025 38;
+        --popover-foreground: 0.95 0.01 60;
+        /* Lighter terracotta for dark mode */
+        --primary: 0.68 0.16 40;
+        --primary-foreground: 0.18 0.02 35;
+        --secondary: 0.30 0.03 42;
+        --secondary-foreground: 0.95 0.01 60;
+        --muted: 0.28 0.025 40;
+        --muted-foreground: 0.70 0.015 55;
+        --accent: 0.40 0.06 45;
+        --accent-foreground: 0.95 0.01 60;
+        --destructive: 0.60 0.20 25;
+        --destructive-foreground: 0.95 0.01 60;
+        --border: 0.35 0.03 42;
+        --input: 0.35 0.03 42;
+        --ring: 0.68 0.16 40;
+        --chart-1: 0.488 0.243 264.376;
+        --chart-2: 0.696 0.17 162.48;
+        --chart-3: 0.769 0.188 70.08;
+        --chart-4: 0.627 0.265 303.9;
+        --chart-5: 0.645 0.246 16.439;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-bold;
+        letter-spacing: -0.02em;
+    }
+
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Focus visible styles */
+    *:focus-visible {
+        @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+    }
+}

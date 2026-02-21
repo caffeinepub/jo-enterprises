@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a business website for Jo enterprises.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Minimal professional wordmark logo, dark text on transparent background (jo-enterprises-logo.dim_512x256.png)\n- Abstract business hero banner illustration with neutral modern palette (jo-enterprises-hero.dim_1600x900.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-marketing-website-for-jo-enterprises-with-a-top-navigation-and-the-following-sections-pages-home-hero-value-proposition-about-services-and-contact",
+      "title": "Create a responsive marketing website for “Jo enterprises” with a top navigation and the following sections/pages: Home (hero + value proposition), About, Services, and Contact.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-define-and-apply-a-coherent-visual-theme-colors-typography-spacing-and-component-style-appropriate-for-a-professional-business-website-and-use-it-consistently-across-all-pages-sections",
+      "title": "Define and apply a coherent visual theme (colors, typography, spacing, and component style) appropriate for a professional business website, and use it consistently across all pages/sections.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-contact-form-that-collects-at-minimum-name-email-and-message-performs-basic-client-side-validation-and-submits-the-inquiry-to-the-backend-for-storage",
+      "title": "Add a Contact form that collects at minimum: name, email, and message, performs basic client-side validation, and submits the inquiry to the backend for storage.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-basic-footer-content-for-jo-enterprises-business-name-and-a-short-tagline-and-include-standard-website-essentials-readable-headings-accessible-color-contrast-and-keyboard-navigable-links-and-form-fields",
+      "title": "Add basic footer content for Jo enterprises (business name and a short tagline) and include standard website essentials: readable headings, accessible color contrast, and keyboard-navigable links and form fields.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-required-static-image-assets-logo-and-a-hero-banner-visual-under-frontend-public-assets-generated-and-render-them-in-the-site-header-hero-areas",
+      "title": "Add required static image assets (logo and a hero/banner visual) under frontend/public/assets/generated and render them in the site header/hero areas.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a business website for Jo enterprises.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Implement backend data storage for contact inquiries, including a stable data model, an endpoint to create an inquiry, and an endpoint to list inquiries (for future admin use).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Jo enterprises",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,23 @@
+{
+  "backend/main.mo": "Motoko canister storing contact inquiries with admin‑gated query access and a submission method that prevents duplicates.",
+  "feature_evidence.json": "Feature evidence report mapping features to files, components, and test IDs for the marketing website project.",
+  "frontend-file-summaries.txt": "JSON-style mapping of frontend file paths to short summaries describing their roles in the marketing site.",
+  "frontend/index.css": "Tailwind base stylesheet defining OKLCH CSS variables for light/dark themes and applying global background/foreground styles.",
+  "frontend/index.html": "Basic HTML entry point that mounts the React app and loads main.tsx.",
+  "frontend/src/App.tsx": "Top-level React component composing navigation, all marketing sections, and the footer.",
+  "frontend/src/components/marketing/ContactSection.tsx": "Contact form component with validation, submission via hook, and success/error UI states.",
+  "frontend/src/components/marketing/Footer.tsx": "Footer with brand info, quick navigation, contact details, and attribution link.",
+  "frontend/src/components/marketing/HeaderNav.tsx": "Responsive header navigation with scroll detection, logo, desktop/mobile menus, and smooth section scrolling.",
+  "frontend/src/components/marketing/MarketingPrimitives.tsx": "Reusable layout and UI primitives including Container, SectionHeading, and PrimaryButton wrappers.",
+  "frontend/src/components/marketing/Sections.tsx": "Provides Hero and About marketing sections with scroll-to-element behavior, background imagery, and value props cards.",
+  "frontend/src/hooks/useActor.ts": "Creates and manages a backend actor tied to Internet Identity, refreshing dependent queries when identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Implements an Internet Identity context/provider handling auth client creation, login, logout, and identity state.",
+  "frontend/src/hooks/useQueries.ts": "Defines a React Query hook to fetch all contact inquiries using the backend actor.",
+  "frontend/src/hooks/useSubmitContactInquiry.ts": "Provides a mutation hook for submitting contact form inquiries and invalidating related queries.",
+  "frontend/src/index.css": "Tailwind base styles plus theme variables for light/dark modes and global typography, borders, and focus states.",
+  "frontend/src/lib/utils.ts": "Exports a utility function that merges Tailwind class names using clsx and tailwind-merge.",
+  "frontend/src/main.tsx": "Bootstraps the React app with QueryClient and InternetIdentityProvider and renders the root component.",
+  "frontend/src/utils/urlParams.ts": "Utilities for reading, persisting, and clearing URL and session parameters, including hash-based routing support.",
+  "frontend/tailwind.config.js": "Tailwind configuration enabling custom colors, typography, animations, and container settings with plugins.",
+  "project_state.json": "Contains the full project state including versions, features, pending requests, and required image assets for the Jo enterprises website. Defines existing features, new backend requirements, and general project metadata."
+}
